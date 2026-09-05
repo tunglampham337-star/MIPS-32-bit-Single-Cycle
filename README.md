@@ -6,7 +6,7 @@ This repository contains the design and verification of a 32-bit Single-Cycle MI
 ## Instruction Formats
 The system supports three fundamental MIPS instruction formats: R-type, I-type, and J-type.
 
-![MIPS Instruction Formats](<img width="947" height="213" alt="Instruction set" src="https://github.com/user-attachments/assets/13216a13-e254-4711-a79b-5d5f37a41f54" />)
+![MIPS Instruction Formats](Images/Instruction%20set.png)
 
 Supported instruction set:
 *   **R-Type (Register arithmetic and logic operations):** `add`, `sub`, `and`, `or`, `slt`
@@ -16,7 +16,7 @@ Supported instruction set:
 ## Datapath and Control Unit
 The schematic below illustrates the complete datapath and the associated control signals realized in the Verilog implementation:
 
-![MIPS Datapath](image_fde78e.jpg)
+![MIPS Datapath](Images/datapath.jpg)
 
 ## Test Programs and Algorithms
 To verify the hardware logic, specific arithmetic algorithms were converted into MIPS machine code and loaded into the Instruction Memory for execution.
@@ -26,7 +26,7 @@ This program determines whether a given integer `n` (stored in register `$t0`) i
 *   `$s2 = 1` if `n` is an even number.
 *   `$s1 = 1` if `n` is an odd number.
 
-![Even/Odd Checker Flowchart](image_fdea91.png)
+![Even/Odd Checker Flowchart](Images/Flow%20Chart1.png)
 
 ### 2. Prime Number Checker
 This program verifies whether an integer is a prime number using iterative divisibility checks. Since the implemented MIPS architecture lacks a dedicated hardware division (`div`) instruction, the modulo operation is simulated via successive subtraction loops. 
@@ -34,18 +34,18 @@ The boolean outcome is output to register `$s0`:
 *   `$s0 = 1`: The number `n` is prime.
 *   `$s0 = 0`: The number `n` is not prime.
 
-![Prime Number Checker Flowchart](image_fdea94.png)
+![Prime Number Checker Flowchart](Images/Flow%20Chart2.png)
 
 ## Simulation Results
 The following waveform captures validate the correct execution of instructions during the testbench simulation. Key signals observed include the Program Counter (`pcout`), branch control signals, and the output registers (`$s0`, `even`, `odd`).
 
 **Even/Odd Checker Simulation:**
-![Waveform 1](image_fdea97.png)
-![Waveform 2](image_fdeaaf.png)
+![Waveform 1](Images/even-odd%20check%202.png)
+![Waveform 2](Images/even-odd%20check%209.png)
 
 **Prime Number Checker Simulation:**
-![Waveform 3](image_fdeab2.png)
-![Waveform 4](image_fdeab5.png)
+![Waveform 3](Images/Prime%20Check%204.png)
+![Waveform 4](Images/Prime%20Check%209png.png)
 
 ## Simulation Instructions
 1. Clone this repository to your local environment.
