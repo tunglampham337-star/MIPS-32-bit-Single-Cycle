@@ -6,7 +6,7 @@ This repository contains the design and verification of a 32-bit Single-Cycle MI
 ## Instruction Formats
 The system supports three fundamental MIPS instruction formats: R-type, I-type, and J-type.
 
-![MIPS Instruction Formats](image_fde792.png)
+![MIPS Instruction Formats](<img width="947" height="213" alt="Instruction set" src="https://github.com/user-attachments/assets/13216a13-e254-4711-a79b-5d5f37a41f54" />)
 
 Supported instruction set:
 *   **R-Type (Register arithmetic and logic operations):** `add`, `sub`, `and`, `or`, `slt`
