@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "/home/ise/Projsct_Xillinx/mips/mips_top_tb_isim_beh.exe" -prj "/home/ise/Projsct_Xillinx/mips/mips_top_tb_beh.prj" "work.mips_top_tb" "work.glbl" 
